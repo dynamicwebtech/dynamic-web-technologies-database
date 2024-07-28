@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 // Data/Functions/Images Imports
 
 // Component Imports
+import { PageHead } from "@/assets/components/global/All/PageHead";
 
 // Style Imports
 import styles from "../../assets/styles/modules/Clients/Clients.module.css";
@@ -14,5 +15,15 @@ import styles from "../../assets/styles/modules/Clients/Clients.module.css";
 export default function RemoveClient() {
   const router = useRouter();
 
-  return "";
+  const PAGE_HEAD_OBJ = {
+    pageTitle: "Remove Client(s)",
+  };
+
+  return (
+    <div id="PAGE" className="page">
+      <PageHead pageHeadObj={PAGE_HEAD_OBJ} />
+
+      <div id="PAGE_CNT"></div>
+    </div>
+  );
 }

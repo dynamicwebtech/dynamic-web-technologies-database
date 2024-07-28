@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 // Data/Functions/Images Imports
 
 // Component Imports
+import { PageHead } from "@/assets/components/global/All/PageHead";
 
 // Style Imports
 import "../assets/styles/modules/Dashboard/Dashboard.module.css";
@@ -14,5 +15,15 @@ import "../assets/styles/modules/Dashboard/Dashboard.module.css";
 export default function Dashboard() {
   const router = useRouter();
 
-  return "";
+  const PAGE_HEAD_OBJ = {
+    pageTitle: "Dashboard",
+  };
+
+  return (
+    <div id="PAGE" className="page">
+      <PageHead pageHeadObj={PAGE_HEAD_OBJ} />
+
+      <div id="PAGE_CNT"></div>
+    </div>
+  );
 }
