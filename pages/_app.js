@@ -1,5 +1,5 @@
 // React/Next Imports
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/router";
 
 // Library Imports
@@ -17,6 +17,9 @@ import DeclareStorageVariable from "../assets/functions/data/storage/DeclareStor
 import RemoveStorageVariable from "../assets/functions/data/storage/RemoveStorageVariable";
 import CheckUserDevice from "../assets/functions/dom/checkers/CheckUserDevice";
 import CheckScreenOrientation from "../assets/functions/dom/checkers/CheckScreenOrientation";
+import CheckPageRoutingState from "@/assets/functions/dom/checkers/routing/CheckWelcomePageState";
+
+import getCurrentUser from "@/assets/hooks/getCurrentUser";
 
 import { fetchClients } from "../assets/functions/async/fetchers/fetchClients";
 import { fetchProjects } from "../assets/functions/async/fetchers/fetchProjects";
@@ -39,8 +42,13 @@ let IS_PAYMENT_REQUIRED = false;
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
+  const hasRedirectedRef = useRef(false);
+
+  const currentUser = getCurrentUser();
+
   const [updateUI, setUpdateUI] = useState(0);
-  const [isLoggedIn, setIsLoggedIn] = useState(null);
+  // const [isLoggedIn, setIsLoggedIn] = useState(null);
 
   // DATA SETTERS
   const [projects, setProjects] = useState([]);
@@ -67,37 +75,18 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
 
-  //! Displaying/Hiding Login Window
+  //! Checking where the user should be (on what pages: login, welcome, dashboard, etc.)
   useEffect(() => {
-    const LOGGED_IN_VARIABLE = localStorage.getItem("Current User");
-
-    if (LOGGED_IN_VARIABLE) {
-      setIsLoggedIn(true);
-    } else {
-      setIsLoggedIn(false);
-    }
-  }, []);
-
-  //! Sending user to login page if not logged in
-  useEffect(() => {
-    const LOGGED_IN_VARIABLE = localStorage.getItem("Current User");
-
-    if (router.pathname !== "/") {
-      if (!LOGGED_IN_VARIABLE) {
-        router.push("/login");
+    if (!hasRedirectedRef.current) {
+      if (currentUser !== null) {
+        CheckPageRoutingState(router, currentUser);
+        hasRedirectedRef.current = true;
       } else {
-        return;
+        CheckPageRoutingState(router, null);
+        hasRedirectedRef.current = true;
       }
     }
-
-    if (router.pathname == "/login" || router.pathname == "/") {
-      if (LOGGED_IN_VARIABLE) {
-        router.push("/dashboard");
-      } else {
-        return;
-      }
-    }
-  }, []);
+  }, [router]);
 
   //! Updating UI State
   useEffect(() => {

@@ -1,1 +1,241 @@
-/*# sourceMappingURL=Index.module.css.map */
+@font-face {
+  font-family: "Open Sans Extra Bold";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies-database/fonts/OpenSans-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies-database/fonts/OpenSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Open Sans Semi Bold";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies-database/fonts/OpenSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Open Sans Medium";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies-database/fonts/OpenSans-Medium.ttf");
+}
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies-database/fonts/OpenSans-Regular.ttf");
+}
+.welcome_main {
+  display: block;
+  text-align: center;
+}
+.welcome_main .welcome_main_inner img {
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.welcome_main .welcome_main_inner h1 {
+  font-family: "Open Sans Extra Bold";
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  font-size: clamp(1.44rem, 2vw + 1.25rem, 2.15rem);
+  color: #272727;
+  opacity: 0.8;
+}
+.welcome_main .welcome_main_inner button {
+  font-family: "Open Sans Bold";
+  background: none;
+  border: 3px solid #abc635;
+  padding: 0.8em 1em;
+  margin: 1em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-transform: uppercase;
+  color: #abc635;
+  letter-spacing: 2.2px;
+  cursor: pointer;
+  border-radius: 10px;
+  transform: translateY(0);
+  transition: all 0.5s linear;
+}
+.welcome_main .welcome_main_inner button:hover {
+  box-shadow: inset 0 0 0.5rem 4em #abc635;
+  transform: translateY(-0.5rem);
+  color: #272727;
+}
+
+@media all and (max-width: 1995px) {
+  .welcome_main {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media all and (max-width: 991px) {
+  .welcome_main {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .welcome_main .welcome_main_inner img {
+    max-width: 500px;
+  }
+  .welcome_main .welcome_main_inner h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  .welcome_main .welcome_main_inner button {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+}
+@media all and (max-width: 768px) {
+  .welcome_main {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .welcome_main .welcome_main_inner img {
+    max-width: 400px;
+  }
+  .welcome_main .welcome_main_inner h1 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  .welcome_main .welcome_main_inner button {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}
+@media all and (max-width: 419px) {
+  .welcome_main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .welcome_main .welcome_main_inner img {
+    max-width: 300px;
+  }
+  .welcome_main .welcome_main_inner h1 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .welcome_main .welcome_main_inner button {
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .welcome_main {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .welcome_main .welcome_main_inner img {
+    max-width: 370px;
+  }
+  .welcome_main .welcome_main_inner h1 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .welcome_main .welcome_main_inner button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .welcome_main {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .welcome_main .welcome_main_inner img {
+    max-width: 470px;
+  }
+  .welcome_main .welcome_main_inner h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .welcome_main .welcome_main_inner button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .welcome_main {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .welcome_main .welcome_main_inner img {
+    max-width: 400px;
+  }
+  .welcome_main .welcome_main_inner h1 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+  .welcome_main .welcome_main_inner button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .welcome_main {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .welcome_main .welcome_main_inner img {
+    max-width: 540px;
+  }
+  .welcome_main .welcome_main_inner h1 {
+    font-size: 34px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+  .welcome_main .welcome_main_inner button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .welcome_main {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .welcome_main .welcome_main_inner img {
+    max-width: 540px;
+  }
+  .welcome_main .welcome_main_inner h1 {
+    font-size: 34px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+  .welcome_main .welcome_main_inner button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+  }
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .welcome_main {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .welcome_main .welcome_main_inner img {
+    max-width: 540px;
+  }
+  .welcome_main .welcome_main_inner h1 {
+    font-size: 34px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+  .welcome_main .welcome_main_inner button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=Index.module.css.map */

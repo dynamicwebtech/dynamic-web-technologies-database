@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/All/PageHead";
+import { WelcomeMain } from "@/assets/components/pages/Welcome/WelcomeMain";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
@@ -37,7 +38,9 @@ export default function Home() {
     >
       <PageHead pageHeadObj={PAGE_HEAD_OBJ} />
 
-      <div id="PAGE_CNT" style={{ maxWidth: "900px", margin: "auto" }}></div>
+      <div id="PAGE_CNT" style={{ maxWidth: "900px", margin: "auto" }}>
+        <WelcomeMain />
+      </div>
     </div>
   );
 }
