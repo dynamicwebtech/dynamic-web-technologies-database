@@ -4,7 +4,10 @@
  *
  */
 
-const NAV_LOGO =
-  "https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/icons/logo/logo-normal.png";
+import { CDNIconReturn, CDNImgReturn } from "./CDNReturns";
 
-export { NAV_LOGO };
+const LOGO = CDNIconReturn("logo", "logo-normal", "png");
+const LOGO_B = CDNIconReturn("logo", "logo-black", "png");
+const LOGO_W = CDNIconReturn("logo", "logo-white", "png");
+
+export { LOGO, LOGO_B, LOGO_W };
