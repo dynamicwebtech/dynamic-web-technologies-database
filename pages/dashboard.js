@@ -19,6 +19,14 @@ export default function Dashboard() {
     pageTitle: "Dashboard",
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      if (!sessionStorage.getItem("Current User")) {
+        router.push("/login");
+      }
+    }, 500);
+  }, []);
+
   return (
     <div id="PAGE" className="page">
       <PageHead pageHeadObj={PAGE_HEAD_OBJ} />

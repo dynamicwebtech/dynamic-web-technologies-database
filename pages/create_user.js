@@ -10,14 +10,20 @@ import { useRouter } from "next/router";
 import { PageHead } from "@/assets/components/global/All/PageHead";
 
 // Style Imports
-import styles from "../../assets/styles/modules/Users/Users.module.css";
+import "../assets/styles/modules/Create_User/Create_User.module.css";
 
-export default function AddUser() {
+export default function CreateUser() {
   const router = useRouter();
 
   const PAGE_HEAD_OBJ = {
-    pageTitle: "Add User(s)",
+    pageTitle: "Create User",
   };
+
+  setTimeout(() => {
+    if (!sessionStorage.getItem("Entered Website")) {
+      router.push("/");
+    }
+  }, 500);
 
   return (
     <div id="PAGE" className="page">

@@ -17,4 +17,242 @@
 @font-face {
   font-family: "Open Sans Regular";
   src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies-database/fonts/OpenSans-Regular.ttf");
+}
+.login_top {
+  display: block;
+  text-align: center;
+}
+.login_top .login_top_inner img {
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login_top .login_top_inner h1 {
+  font-family: "Open Sans Extra Bold";
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  font-size: clamp(1.44rem, 2vw + 1.25rem, 2.15rem);
+  color: #272727;
+  opacity: 0.8;
+}
+
+.login_main .login_main_form {
+  background-color: white;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+.login_main .login_main_form .login_main_form_inner .login_main_form_inner_set {
+  margin-bottom: 25px;
+  width: 100%;
+}
+.login_main .login_main_form .login_main_form_inner .login_main_form_inner_set label {
+  font-family: "Open Sans Bold";
+}
+.login_main .login_main_form .login_main_form_inner .login_main_form_inner_set input {
+  font-family: "Open Sans Medium";
+  display: block;
+  background-color: rgba(201, 201, 201, 0.228);
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.login_main .login_main_form .login_main_form_inner .password_set {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.login_main .login_main_form .login_main_form_inner .password_set .login_main_form_inner_set input {
+  max-width: 98%;
+}
+.login_main .login_main_form .login_main_form_inner .password_set .hide_show_box {
+  position: relative;
+  width: 100%;
+  max-width: 30px;
+  height: 30px;
+  border: 2px solid #272727;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+.login_main .login_main_form .login_main_form_inner .password_set .hide_show_box:hover {
+  background-color: #272727;
+}
+.login_main .login_main_form .login_main_form_inner .password_set .hide_show_box:hover .icon {
+  color: white;
+}
+.login_main .login_main_form .login_main_form_inner .password_set .hide_show_box input {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 100;
+  cursor: pointer;
+}
+.login_main .login_main_form .login_main_form_inner .password_set .hide_show_box .icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.login_main .login_main_form .login_main_form_inner .login_btns {
+  display: "flex";
+  justify-content: "flex-start";
+  align-items: "center";
+}
+.login_main .login_main_form .login_main_form_inner .login_btns button {
+  margin-right: 14px;
+  font-family: "Open Sans Bold";
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.login_main .login_main_form .login_main_form_inner .login_btns .reset_btn {
+  background-color: #1684a7;
+}
+.login_main .login_main_form .login_main_form_inner .login_btns .login_btn {
+  background-color: #abc635;
+}
+
+@media all and (max-width: 1995px) {
+  .login_top {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media all and (max-width: 991px) {
+  .login_top {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .login_top .login_top_inner img {
+    max-width: 500px;
+  }
+  .login_top .login_top_inner h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+@media all and (max-width: 768px) {
+  .login_top {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .login_top .login_top_inner img {
+    max-width: 400px;
+  }
+  .login_top .login_top_inner h1 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+}
+@media all and (max-width: 419px) {
+  .login_top {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .login_top .login_top_inner img {
+    max-width: 300px;
+  }
+  .login_top .login_top_inner h1 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .login_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .login_top .login_top_inner img {
+    max-width: 370px;
+  }
+  .login_top .login_top_inner h1 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .login_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .login_top .login_top_inner img {
+    max-width: 470px;
+  }
+  .login_top .login_top_inner h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .login_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .login_top .login_top_inner img {
+    max-width: 400px;
+  }
+  .login_top .login_top_inner h1 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .login_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .login_top .login_top_inner img {
+    max-width: 540px;
+  }
+  .login_top .login_top_inner h1 {
+    font-size: 34px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .login_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .login_top .login_top_inner img {
+    max-width: 540px;
+  }
+  .login_top .login_top_inner h1 {
+    font-size: 34px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .login_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .login_top .login_top_inner img {
+    max-width: 540px;
+  }
+  .login_top .login_top_inner h1 {
+    font-size: 34px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
 }/*# sourceMappingURL=Login.module.css.map */

@@ -10,14 +10,20 @@ import { useRouter } from "next/router";
 import { PageHead } from "@/assets/components/global/All/PageHead";
 
 // Style Imports
-import styles from "../../assets/styles/modules/Users/Users.module.css";
+import "../assets/styles/modules/Forgot_Password/Forgot_Password.module.css";
 
-export default function EditUser() {
+export default function ForgotPassword() {
   const router = useRouter();
 
   const PAGE_HEAD_OBJ = {
-    pageTitle: "Edit User(s)",
+    pageTitle: "Forgot Password",
   };
+
+  setTimeout(() => {
+    if (!sessionStorage.getItem("Entered Website")) {
+      router.push("/");
+    }
+  }, 500);
 
   return (
     <div id="PAGE" className="page">

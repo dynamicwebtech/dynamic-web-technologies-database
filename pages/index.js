@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 // Library Imports
 
 // Data/Functions/Images Imports
+import getWebsiteEnterance from "@/assets/hooks/getWebsiteEnterance";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/All/PageHead";
@@ -19,6 +20,16 @@ export default function Home() {
   const PAGE_HEAD_OBJ = {
     pageTitle: "Welcome",
   };
+
+  const websiteEnterance = getWebsiteEnterance();
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (websiteEnterance) {
+        router.push("/login");
+      }
+    }, 500);
+  }, []);
 
   return (
     <div

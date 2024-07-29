@@ -17,7 +17,6 @@ import DeclareStorageVariable from "../assets/functions/data/storage/DeclareStor
 import RemoveStorageVariable from "../assets/functions/data/storage/RemoveStorageVariable";
 import CheckUserDevice from "../assets/functions/dom/checkers/CheckUserDevice";
 import CheckScreenOrientation from "../assets/functions/dom/checkers/CheckScreenOrientation";
-import CheckPageRoutingState from "@/assets/functions/dom/checkers/routing/CheckWelcomePageState";
 
 import getCurrentUser from "@/assets/hooks/getCurrentUser";
 
@@ -44,8 +43,6 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   const hasRedirectedRef = useRef(false);
-
-  const currentUser = getCurrentUser();
 
   const [updateUI, setUpdateUI] = useState(0);
   // const [isLoggedIn, setIsLoggedIn] = useState(null);
@@ -77,16 +74,16 @@ function MyApp({ Component, pageProps }) {
 
   //! Checking where the user should be (on what pages: login, welcome, dashboard, etc.)
   useEffect(() => {
-    if (!hasRedirectedRef.current) {
-      if (currentUser !== null) {
-        CheckPageRoutingState(router, currentUser);
-        hasRedirectedRef.current = true;
-      } else {
-        CheckPageRoutingState(router, null);
-        hasRedirectedRef.current = true;
-      }
-    }
-  }, [router]);
+    // if (!hasRedirectedRef.current) {
+    //   if (currentUser !== null) {
+    //     CheckPageRoutingState(router, currentUser);
+    //     hasRedirectedRef.current = true;
+    //   } else {
+    //     CheckPageRoutingState(router, null);
+    //     hasRedirectedRef.current = true;
+    //   }
+    // }
+  }, []);
 
   //! Updating UI State
   useEffect(() => {

@@ -36,12 +36,14 @@ export const WelcomeMain = () => {
           className={`${styles.enter_site} orientation-change-element half-second`}
           onClick={(e) => {
             // Triggers the user has entered the website
-            DeclareStorageVariable("session", "Entered Database", true);
+            DeclareStorageVariable("session", "Entered Website", true);
 
-            CheckPageRoutingState(router, null); // Bingo!
+            router.push("/login");
+
+            // CheckPageRoutingState(router, null); // Bingo!
           }}
         >
-          <span>Enter Database</span>
+          <span>Go To Login</span>
         </button>
       </div>
     </section>

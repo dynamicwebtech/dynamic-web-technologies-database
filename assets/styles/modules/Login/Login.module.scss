@@ -24,14 +24,153 @@
   font-family: "Open Sans Regular";
   src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies-database/fonts/OpenSans-Regular.ttf");
 }
-
 // Desktop
+.login_top {
+  display: block;
+  text-align: center;
+
+  .login_top_inner {
+    img {
+      max-width: 600px;
+      width: 100%;
+      @include quickCenter("relative");
+    }
+
+    h1 {
+      font-family: "Open Sans Extra Bold";
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 70px;
+      font-size: $Logo;
+      color: $MineShaft;
+      opacity: 0.8;
+    }
+  }
+}
+.login_main {
+  .login_main_form {
+    background-color: white;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+
+    .login_main_form_inner {
+      .login_main_form_inner_set {
+        margin-bottom: 25px;
+        width: 100%;
+
+        label {
+          font-family: "Open Sans Bold";
+        }
+
+        input {
+          font-family: "Open Sans Medium";
+          display: block;
+          background-color: rgba(201, 201, 201, 0.228);
+          padding: 10px;
+          width: 100%;
+          border-radius: 10px;
+          margin-top: 10px;
+        }
+      }
+
+      .password_set {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+
+        .login_main_form_inner_set {
+          input {
+            max-width: 98%;
+          }
+        }
+
+        .hide_show_box {
+          position: relative;
+          width: 100%;
+          max-width: 30px;
+          height: 30px;
+          border: 2px solid $MineShaft;
+          border-radius: 5px;
+          margin-top: 8px;
+
+          &:hover {
+            background-color: $MineShaft;
+
+            .icon {
+              color: white;
+            }
+          }
+
+          input {
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: 100;
+            cursor: pointer;
+          }
+
+          .icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+
+      .login_btns {
+        @include displayElement("flex", "flex-start", "center");
+
+        button {
+          margin-right: 14px;
+          font-family: "Open Sans Bold";
+          color: white;
+          padding: 10px;
+          border-radius: 10px;
+        }
+
+        .reset_btn {
+          background-color: $EasternBlue;
+        }
+
+        .login_btn {
+          background-color: $Atlantis;
+        }
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {
+  .login_top {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 @media all and (max-width: 991px) {
+  .login_top {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .login_top_inner {
+      img {
+        max-width: 500px;
+      }
+
+      h1 {
+        font-size: clamp(26px, 30px, 30px);
+        margin-bottom: 40px;
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -39,30 +178,163 @@
 
 // Desktop Window (Smallest)
 @media all and (max-width: 768px) {
+  .login_top {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .login_top_inner {
+      img {
+        max-width: 400px;
+      }
+
+      h1 {
+        font-size: clamp(21px, 26px, 26px);
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 
 // Smaller Devices (Phones)
 @media all and (max-width: 419px) {
+  .login_top {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .login_top_inner {
+      img {
+        max-width: 300px;
+      }
+
+      h1 {
+        font-size: clamp(19px, 20px, 20px);
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
 // Pixel 2 XL
 @media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .login_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .login_top_inner {
+      img {
+        max-width: 370px;
+      }
+
+      h1 {
+        font-size: clamp(20px, 22px, 22px);
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
 // Ipad
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .login_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .login_top_inner {
+      img {
+        max-width: 470px;
+      }
+
+      h1 {
+        font-size: clamp(25px, 30px, 30px);
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .login_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .login_top_inner {
+      img {
+        max-width: 400px;
+      }
+
+      h1 {
+        font-size: clamp(23px, 25px, 25px);
+        margin-top: 10px;
+        margin-bottom: 40px;
+      }
+    }
+  }
 }
 
 // iPad Pro
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .login_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .login_top_inner {
+      img {
+        max-width: 540px;
+      }
+
+      h1 {
+        font-size: clamp(28px, 34px, 34px);
+        margin-top: 20px;
+        margin-bottom: 70px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .login_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .login_top_inner {
+      img {
+        max-width: 540px;
+      }
+
+      h1 {
+        font-size: clamp(28px, 34px, 34px);
+        margin-top: 20px;
+        margin-bottom: 70px;
+      }
+    }
+  }
 }
 
 // Laptops
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .login_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .login_top_inner {
+      img {
+        max-width: 540px;
+      }
+
+      h1 {
+        font-size: clamp(28px, 34px, 34px);
+        margin-top: 20px;
+        margin-bottom: 70px;
+      }
+    }
+  }
 }

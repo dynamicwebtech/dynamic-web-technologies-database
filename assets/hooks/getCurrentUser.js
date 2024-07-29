@@ -13,6 +13,9 @@ const getCurrentUser = () => {
     const CURRENT_USER = localStorage.getItem("Current User");
     if (CURRENT_USER) {
       setCurrentUser(JSON.parse(CURRENT_USER)); // Setting the currentUser object to the state
+      console.log(currentUser);
+    } else {
+      console.log("There is no user logged in..");
     }
   }, []);
 
