@@ -12,10 +12,14 @@ const getCurrentUser = () => {
   useEffect(() => {
     const CURRENT_USER = localStorage.getItem("Current User");
     if (CURRENT_USER) {
-      setCurrentUser(JSON.parse(CURRENT_USER)); // Setting the currentUser object to the state
-      console.log(currentUser);
+      try {
+        setCurrentUser(JSON.parse(CURRENT_USER)); // Setting the currentUser object to the state
+        console.log(JSON.parse(CURRENT_USER));
+      } catch (error) {
+        console.error("Error parsing current user:", error);
+      }
     } else {
-      console.log("There is no user logged in..");
+      console.log("There is no user logged in.");
     }
   }, []);
 

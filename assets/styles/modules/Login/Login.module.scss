@@ -50,7 +50,7 @@
 .login_main {
   .login_main_form {
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     margin-top: 30px;
     margin-bottom: 40px;
     border-radius: 10px;
@@ -145,6 +145,26 @@
       }
     }
   }
+
+  .bottom_links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+
+    ul {
+      font-family: "Open Sans Semi Bold";
+
+      li {
+        margin-bottom: 15px;
+
+        a {
+          color: $EasternBlue;
+          font-size: $SmallLink;
+        }
+      }
+    }
+  }
 }
 
 // Responsive
@@ -152,6 +172,11 @@
   .login_top {
     padding-left: 50px;
     padding-right: 50px;
+  }
+  .login_main {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 40px;
   }
 }
 
@@ -168,6 +193,22 @@
       h1 {
         font-size: clamp(26px, 30px, 30px);
         margin-bottom: 40px;
+      }
+    }
+  }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 80px;
+
+    .bottom_links {
+      justify-content: center;
+      text-align: center;
+
+      ul {
+        li {
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -193,13 +234,48 @@
       }
     }
   }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 40px;
+
+    .login_main_form {
+      .login_main_form_inner {
+        .login_main_form_inner_set {
+          input {
+            padding: 7px;
+            font-size: 14.5px;
+          }
+        }
+
+        .login_btns {
+          button {
+            padding: 10px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .bottom_links {
+      justify-content: center;
+      text-align: center;
+
+      ul {
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }
 
 // Smaller Devices (Phones)
 @media all and (max-width: 419px) {
   .login_top {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
 
     .login_top_inner {
       img {
@@ -213,12 +289,49 @@
       }
     }
   }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 55px;
+
+    .login_main_form {
+      padding: 20px;
+
+      .login_main_form_inner {
+        .login_main_form_inner_set {
+          input {
+            padding: 6px;
+            font-size: 14.5px;
+          }
+        }
+
+        .login_btns {
+          button {
+            padding: 10px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .bottom_links {
+      justify-content: center;
+      text-align: center;
+
+      ul {
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }
 
 // Pixel 2 XL
 @media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .login_top {
-    padding-top: 20px;
+    padding-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -231,6 +344,43 @@
         font-size: clamp(20px, 22px, 22px);
         margin-top: 10px;
         margin-bottom: 20px;
+      }
+    }
+  }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 55px;
+
+    .login_main_form {
+      padding: 20px;
+
+      .login_main_form_inner {
+        .login_main_form_inner_set {
+          input {
+            padding: 6px;
+            font-size: 14.5px;
+          }
+        }
+
+        .login_btns {
+          button {
+            padding: 10px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .bottom_links {
+      justify-content: center;
+      text-align: center;
+
+      ul {
+        li {
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -255,23 +405,97 @@
       }
     }
   }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 125px;
+
+    .login_main_form {
+      padding: 20px;
+
+      .login_main_form_inner {
+        .login_main_form_inner_set {
+          input {
+            padding: 6px;
+            font-size: 14.5px;
+          }
+        }
+
+        .login_btns {
+          button {
+            padding: 10px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .bottom_links {
+      justify-content: center;
+      text-align: center;
+
+      ul {
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
   .login_top {
-    padding-top: 20px;
+    padding-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
 
     .login_top_inner {
       img {
-        max-width: 400px;
+        max-width: 370px;
       }
 
       h1 {
-        font-size: clamp(23px, 25px, 25px);
+        font-size: clamp(20px, 22px, 22px);
         margin-top: 10px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 55px;
+
+    .login_main_form {
+      padding: 20px;
+
+      .login_main_form_inner {
+        .login_main_form_inner_set {
+          input {
+            padding: 6px;
+            font-size: 14.5px;
+          }
+        }
+
+        .login_btns {
+          button {
+            padding: 10px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .bottom_links {
+      justify-content: center;
+      text-align: center;
+
+      ul {
+        li {
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -286,13 +510,50 @@
 
     .login_top_inner {
       img {
-        max-width: 540px;
+        max-width: 470px;
       }
 
       h1 {
-        font-size: clamp(28px, 34px, 34px);
+        font-size: clamp(25px, 30px, 30px);
         margin-top: 20px;
-        margin-bottom: 70px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 125px;
+
+    .login_main_form {
+      padding: 20px;
+
+      .login_main_form_inner {
+        .login_main_form_inner_set {
+          input {
+            padding: 10px;
+            font-size: 15.5px;
+          }
+        }
+
+        .login_btns {
+          button {
+            padding: 10px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .bottom_links {
+      justify-content: center;
+      text-align: center;
+
+      ul {
+        li {
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -306,13 +567,50 @@
 
     .login_top_inner {
       img {
-        max-width: 540px;
+        max-width: 470px;
       }
 
       h1 {
-        font-size: clamp(28px, 34px, 34px);
+        font-size: clamp(25px, 30px, 30px);
         margin-top: 20px;
-        margin-bottom: 70px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 125px;
+
+    .login_main_form {
+      padding: 20px;
+
+      .login_main_form_inner {
+        .login_main_form_inner_set {
+          input {
+            padding: 10px;
+            font-size: 15.5px;
+          }
+        }
+
+        .login_btns {
+          button {
+            padding: 10px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .bottom_links {
+      justify-content: center;
+      text-align: center;
+
+      ul {
+        li {
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -327,13 +625,50 @@
 
     .login_top_inner {
       img {
-        max-width: 540px;
+        max-width: 470px;
       }
 
       h1 {
-        font-size: clamp(28px, 34px, 34px);
+        font-size: clamp(25px, 30px, 30px);
         margin-top: 20px;
-        margin-bottom: 70px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 125px;
+
+    .login_main_form {
+      padding: 20px;
+
+      .login_main_form_inner {
+        .login_main_form_inner_set {
+          input {
+            padding: 10px;
+            font-size: 15.5px;
+          }
+        }
+
+        .login_btns {
+          button {
+            padding: 10px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .bottom_links {
+      justify-content: center;
+      text-align: center;
+
+      ul {
+        li {
+          margin-bottom: 10px;
+        }
       }
     }
   }

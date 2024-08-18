@@ -4,7 +4,9 @@
  *
  */
 
+import { useState } from "react";
 import { useRouter } from "next/router";
+import axios from "axios";
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -13,46 +15,71 @@ import styles from "../../../styles/modules/Login/Login.module.css";
 export const LoginMain = () => {
   const router = useRouter();
 
-  const handleLogin = async (event) => {
-    event.preventDefault();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-    const loginEmail = event.target.loginEmail.value;
-    const loginPassword = event.target.loginPassword.value;
+  // const handleLogin = async (event) => {
+  //   event.preventDefault();
+
+  //   const loginEmail = event.target.loginEmail.value;
+  //   const loginPassword = event.target.loginPassword.value;
+
+  //   try {
+  //     const res = await fetch("/api/login/loginUser", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ loginEmail, loginPassword }),
+  //     });
+
+  //     const data = await res.json();
+
+  //     if (res.ok) {
+  //       // Handle successful login
+  //       console.log("Login successful:", data.message);
+  //       // Redirect to another page, e.g., the dashboard
+  //       alert(data.message);
+
+  //       localStorage.setItem(
+  //         "Current User",
+  //         JSON.stringify({
+  //           email: loginEmail,
+  //           hashedPassword: data.hashedPassword,
+  //         })
+  //       );
+
+  //       router.push("/dashboard");
+  //     } else {
+  //       // Handle error response
+  //       console.error("Login failed:", data.error);
+  //       alert(data.error);
+  //     }
+  //   } catch (error) {
+  //     console.error("An error occurred:", error);
+  //     alert(error);
+  //   }
+  // };
+
+  const handleLogin = async (e, email, password, formError, router) => {
+    e.preventDefault();
 
     try {
-      const res = await fetch("/api/login/loginUser", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ loginEmail, loginPassword }),
+      const response = await axios.post("/api/login/loginUser", {
+        email,
+        password,
       });
 
-      const data = await res.json();
+      const { token } = response.data;
 
-      if (res.ok) {
-        // Handle successful login
-        console.log("Login successful:", data.message);
-        // Redirect to another page, e.g., the dashboard
-        alert(data.message);
+      // Store the token in sessionStorage
+      sessionStorage.setItem("Current User", token);
 
-        localStorage.setItem(
-          "Current User",
-          JSON.stringify({
-            email: loginEmail,
-            hashedPassword: data.hashedPassword,
-          })
-        );
-
-        router.push("/dashboard");
-      } else {
-        // Handle error response
-        console.error("Login failed:", data.error);
-        alert(data.error);
-      }
+      router.push("/dashboard");
     } catch (error) {
-      console.error("An error occurred:", error);
-      alert(error);
+      formError("Invalid credentials!");
+      console.error("Login error:", error);
     }
   };
 
@@ -61,6 +88,10 @@ export const LoginMain = () => {
     const SHOW_ICON = document.getElementById("showIcon");
     const HIDE_ICON = document.getElementById("hideIcon");
     const PASSWORD_INPUT = document.getElementById("loginPassword");
+
+    setEmail("");
+    setPassword("");
+    setError("");
 
     CHECKED.checked = false;
     PASSWORD_INPUT.type = "password";
@@ -73,19 +104,33 @@ export const LoginMain = () => {
       <form
         className={`${styles.login_main_form}`}
         id="loginForm"
-        onSubmit={handleLogin}
+        onSubmit={(e) => {
+          handleLogin(e, email, password, setError, router);
+        }}
         onReset={resetForm}
       >
         <div className={`${styles.login_main_form_inner}`}>
           <div className={`${styles.login_main_form_inner_set}`}>
             <label for="loginEmail">User Email Address:</label>
-            <input type="email" id="loginEmail" name="loginEmail" />
+            <input
+              type="email"
+              id="loginEmail"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
 
           <div className={`${styles.password_set}`}>
             <div className={`${styles.login_main_form_inner_set}`}>
               <label for="loginPassword">User Password:</label>
-              <input type="password" id="loginPassword" name="loginPassword" />
+              <input
+                type="password"
+                id="loginPassword"
+                name="password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+              />
             </div>
 
             <div className={`${styles.hide_show_box}`}>
@@ -135,7 +180,9 @@ export const LoginMain = () => {
         </div>
       </form>
 
-      <div className={`${styles.bottom_links}`}>
+      {/**
+      
+        <div className={`${styles.bottom_links}`}>
         <ul>
           <li>
             <a href="/create_user">
@@ -149,6 +196,8 @@ export const LoginMain = () => {
           </li>
         </ul>
       </div>
+        
+      */}
     </section>
   );
 };

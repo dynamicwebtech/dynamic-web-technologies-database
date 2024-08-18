@@ -26,12 +26,89 @@
 }
 
 // Desktop
+.main_nav {
+  display: block;
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  .main_nav_inner {
+    width: 100%;
+    @include displayElement(flex, space-between, center);
+
+    img {
+      max-width: 600px;
+      width: 100%;
+      @include quickCenter("relative");
+      margin-left: 0;
+    }
+
+    .main_nav_links {
+      display: block;
+      margin-top: 25px;
+
+      button {
+        @include displayElement(flex, space-between, center);
+        margin-left: auto;
+        margin-right: 0;
+        margin-bottom: 15px;
+        border: 2px solid $MineShaft;
+        padding: 10px;
+        font-family: "Open Sans Bold";
+        color: $MineShaft;
+        border-radius: 10px;
+
+        span {
+          margin-right: 10px;
+        }
+
+        &:hover {
+          background-color: $MineShaft;
+          color: white;
+        }
+      }
+
+      .current_user {
+        display: block;
+        font-family: "Open Sans Medium";
+
+        span {
+          font-family: "Open Sans Bold";
+        }
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {
+  .main_nav {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 @media all and (max-width: 991px) {
+  .main_nav {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .main_nav_inner {
+      display: block;
+
+      img {
+        max-width: 500px;
+      }
+
+      .main_nav_links {
+        margin-top: 40px;
+
+        button {
+          @include quickCenter("relative");
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -39,30 +116,244 @@
 
 // Desktop Window (Smallest)
 @media all and (max-width: 768px) {
+  .main_nav {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .main_nav_inner {
+      display: block;
+
+      img {
+        max-width: 400px;
+      }
+
+      .main_nav_links {
+        margin-top: 40px;
+
+        button {
+          @include quickCenter("relative");
+        }
+      }
+    }
+  }
 }
 
 // Smaller Devices (Phones)
 @media all and (max-width: 419px) {
+  .main_nav {
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .main_nav_inner {
+      display: block;
+
+      img {
+        max-width: 300px;
+      }
+
+      .main_nav_links {
+        margin-top: 40px;
+
+        button {
+          @include quickCenter("relative");
+          font-size: 14px;
+          padding: 7px;
+        }
+
+        .current_user {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 
 // Pixel 2 XL
 @media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .main_nav {
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .main_nav_inner {
+      display: block;
+
+      img {
+        max-width: 370px;
+      }
+
+      .main_nav_links {
+        margin-top: 40px;
+
+        button {
+          @include quickCenter("relative");
+          font-size: 14px;
+          padding: 7px;
+        }
+
+        .current_user {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 
 // Ipad
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .main_nav {
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .main_nav_inner {
+      display: flex;
+
+      img {
+        max-width: 370px;
+      }
+
+      .main_nav_links {
+        margin-top: 40px;
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          font-size: 15px;
+          padding: 8px;
+        }
+
+        .current_user {
+          font-size: 15px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .main_nav {
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .main_nav_inner {
+      display: flex;
+
+      img {
+        max-width: 370px;
+      }
+
+      .main_nav_links {
+        margin-top: 0px;
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          font-size: 15px;
+          padding: 8px;
+        }
+
+        .current_user {
+          font-size: 15px;
+        }
+      }
+    }
+  }
 }
 
 // iPad Pro
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .main_nav {
+    padding-top: 40px;
+    padding-left: 65px;
+    padding-right: 65px;
+
+    .main_nav_inner {
+      display: flex;
+
+      img {
+        max-width: 420px;
+      }
+
+      .main_nav_links {
+        margin-top: 0px;
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          font-size: 16px;
+          padding: 10px;
+        }
+
+        .current_user {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .main_nav {
+    padding-top: 40px;
+    padding-left: 65px;
+    padding-right: 65px;
+
+    .main_nav_inner {
+      display: flex;
+
+      img {
+        max-width: 420px;
+      }
+
+      .main_nav_links {
+        margin-top: 0px;
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          font-size: 16px;
+          padding: 10px;
+        }
+
+        .current_user {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
 
 // Laptops
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .main_nav {
+    padding-top: 60px;
+    padding-left: 85px;
+    padding-right: 85px;
+
+    .main_nav_inner {
+      display: flex;
+
+      img {
+        max-width: 480px;
+      }
+
+      .main_nav_links {
+        margin-top: 0px;
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          font-size: 18px;
+          padding: 10px;
+        }
+
+        .current_user {
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }

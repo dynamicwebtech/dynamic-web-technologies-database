@@ -17,4 +17,161 @@
 @font-face {
   font-family: "Open Sans Regular";
   src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies-database/fonts/OpenSans-Regular.ttf");
+}
+.create_user_top {
+  display: block;
+  text-align: center;
+}
+.create_user_top .create_user_top_inner img {
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.create_user_top .create_user_top_inner h1 {
+  font-family: "Open Sans Extra Bold";
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  font-size: clamp(1.44rem, 2vw + 1.25rem, 2.15rem);
+  color: #272727;
+  opacity: 0.8;
+}
+
+@media all and (max-width: 1995px) {
+  .create_user_top {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media all and (max-width: 991px) {
+  .create_user_top {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .create_user_top .create_user_top_inner img {
+    max-width: 500px;
+  }
+  .create_user_top .create_user_top_inner h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+@media all and (max-width: 768px) {
+  .create_user_top {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .create_user_top .create_user_top_inner img {
+    max-width: 400px;
+  }
+  .create_user_top .create_user_top_inner h1 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+}
+@media all and (max-width: 419px) {
+  .create_user_top {
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .create_user_top .create_user_top_inner img {
+    max-width: 300px;
+  }
+  .create_user_top .create_user_top_inner h1 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .create_user_top {
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .create_user_top .create_user_top_inner img {
+    max-width: 370px;
+  }
+  .create_user_top .create_user_top_inner h1 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .create_user_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .create_user_top .create_user_top_inner img {
+    max-width: 470px;
+  }
+  .create_user_top .create_user_top_inner h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .create_user_top {
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .create_user_top .create_user_top_inner img {
+    max-width: 370px;
+  }
+  .create_user_top .create_user_top_inner h1 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .create_user_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .create_user_top .create_user_top_inner img {
+    max-width: 470px;
+  }
+  .create_user_top .create_user_top_inner h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .create_user_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .create_user_top .create_user_top_inner img {
+    max-width: 470px;
+  }
+  .create_user_top .create_user_top_inner h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .create_user_top {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .create_user_top .create_user_top_inner img {
+    max-width: 470px;
+  }
+  .create_user_top .create_user_top_inner h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
 }/*# sourceMappingURL=Create_User.module.css.map */

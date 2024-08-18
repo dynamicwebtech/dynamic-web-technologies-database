@@ -19,7 +19,7 @@ import "../assets/styles/modules/Login/Login.module.css";
 export default function Login() {
   const router = useRouter();
 
-  const currentUser = getCurrentUser();
+  // const currentUser = getCurrentUser();
 
   const PAGE_HEAD_OBJ = {
     pageTitle: "Login",
@@ -27,7 +27,7 @@ export default function Login() {
 
   useEffect(() => {
     setTimeout(() => {
-      if (currentUser) {
+      if (sessionStorage.getItem("Current User")) {
         router.push("/dashboard");
       }
 
@@ -59,7 +59,8 @@ export default function Login() {
 
       <div id="PAGE_CNT" style={{ maxWidth: "600px", margin: "auto" }}>
         <LoginTop />
-        <LoginMain currentUser={currentUser} />
+        {/** <LoginMain currentUser={currentUser} /> */}
+        <LoginMain />
       </div>
     </div>
   );

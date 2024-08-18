@@ -40,7 +40,7 @@
 
 .login_main .login_main_form {
   background-color: white;
-  padding: 20px;
+  padding: 30px;
   margin-top: 30px;
   margin-bottom: 40px;
   border-radius: 10px;
@@ -119,11 +119,32 @@
 .login_main .login_main_form .login_main_form_inner .login_btns .login_btn {
   background-color: #abc635;
 }
+.login_main .bottom_links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+}
+.login_main .bottom_links ul {
+  font-family: "Open Sans Semi Bold";
+}
+.login_main .bottom_links ul li {
+  margin-bottom: 15px;
+}
+.login_main .bottom_links ul li a {
+  color: #1684a7;
+  font-size: clamp(0.8rem, 0.24vw + 0.81rem, 1.04rem);
+}
 
 @media all and (max-width: 1995px) {
   .login_top {
     padding-left: 50px;
     padding-right: 50px;
+  }
+  .login_main {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 40px;
   }
 }
 @media all and (max-width: 991px) {
@@ -138,6 +159,18 @@
     font-size: 30px;
     margin-bottom: 40px;
   }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 80px;
+  }
+  .login_main .bottom_links {
+    justify-content: center;
+    text-align: center;
+  }
+  .login_main .bottom_links ul li {
+    margin-bottom: 10px;
+  }
 }
 @media all and (max-width: 768px) {
   .login_top {
@@ -151,11 +184,32 @@
     font-size: 26px;
     margin-bottom: 30px;
   }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 40px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_main_form_inner_set input {
+    padding: 7px;
+    font-size: 14.5px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_btns button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .login_main .bottom_links {
+    justify-content: center;
+    text-align: center;
+  }
+  .login_main .bottom_links ul li {
+    margin-bottom: 10px;
+  }
 }
 @media all and (max-width: 419px) {
   .login_top {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .login_top .login_top_inner img {
     max-width: 300px;
@@ -165,10 +219,34 @@
     margin-top: 10px;
     margin-bottom: 20px;
   }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 55px;
+  }
+  .login_main .login_main_form {
+    padding: 20px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_main_form_inner_set input {
+    padding: 6px;
+    font-size: 14.5px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_btns button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .login_main .bottom_links {
+    justify-content: center;
+    text-align: center;
+  }
+  .login_main .bottom_links ul li {
+    margin-bottom: 10px;
+  }
 }
 @media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .login_top {
-    padding-top: 20px;
+    padding-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -179,6 +257,30 @@
     font-size: 22px;
     margin-top: 10px;
     margin-bottom: 20px;
+  }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 55px;
+  }
+  .login_main .login_main_form {
+    padding: 20px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_main_form_inner_set input {
+    padding: 6px;
+    font-size: 14.5px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_btns button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .login_main .bottom_links {
+    justify-content: center;
+    text-align: center;
+  }
+  .login_main .bottom_links ul li {
+    margin-bottom: 10px;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
@@ -195,20 +297,68 @@
     margin-top: 20px;
     margin-bottom: 50px;
   }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 125px;
+  }
+  .login_main .login_main_form {
+    padding: 20px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_main_form_inner_set input {
+    padding: 6px;
+    font-size: 14.5px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_btns button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .login_main .bottom_links {
+    justify-content: center;
+    text-align: center;
+  }
+  .login_main .bottom_links ul li {
+    margin-bottom: 10px;
+  }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
   .login_top {
-    padding-top: 20px;
+    padding-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
   }
   .login_top .login_top_inner img {
-    max-width: 400px;
+    max-width: 370px;
   }
   .login_top .login_top_inner h1 {
-    font-size: 25px;
+    font-size: 22px;
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+  }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 55px;
+  }
+  .login_main .login_main_form {
+    padding: 20px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_main_form_inner_set input {
+    padding: 6px;
+    font-size: 14.5px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_btns button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .login_main .bottom_links {
+    justify-content: center;
+    text-align: center;
+  }
+  .login_main .bottom_links ul li {
+    margin-bottom: 10px;
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
@@ -218,12 +368,36 @@
     padding-right: 20px;
   }
   .login_top .login_top_inner img {
-    max-width: 540px;
+    max-width: 470px;
   }
   .login_top .login_top_inner h1 {
-    font-size: 34px;
+    font-size: 30px;
     margin-top: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+  }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 125px;
+  }
+  .login_main .login_main_form {
+    padding: 20px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_main_form_inner_set input {
+    padding: 10px;
+    font-size: 15.5px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_btns button {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .login_main .bottom_links {
+    justify-content: center;
+    text-align: center;
+  }
+  .login_main .bottom_links ul li {
+    margin-bottom: 10px;
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -233,12 +407,36 @@
     padding-right: 20px;
   }
   .login_top .login_top_inner img {
-    max-width: 540px;
+    max-width: 470px;
   }
   .login_top .login_top_inner h1 {
-    font-size: 34px;
+    font-size: 30px;
     margin-top: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+  }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 125px;
+  }
+  .login_main .login_main_form {
+    padding: 20px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_main_form_inner_set input {
+    padding: 10px;
+    font-size: 15.5px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_btns button {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .login_main .bottom_links {
+    justify-content: center;
+    text-align: center;
+  }
+  .login_main .bottom_links ul li {
+    margin-bottom: 10px;
   }
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -248,11 +446,35 @@
     padding-right: 20px;
   }
   .login_top .login_top_inner img {
-    max-width: 540px;
+    max-width: 470px;
   }
   .login_top .login_top_inner h1 {
-    font-size: 34px;
+    font-size: 30px;
     margin-top: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+  }
+  .login_main {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: 125px;
+  }
+  .login_main .login_main_form {
+    padding: 20px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_main_form_inner_set input {
+    padding: 10px;
+    font-size: 15.5px;
+  }
+  .login_main .login_main_form .login_main_form_inner .login_btns button {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .login_main .bottom_links {
+    justify-content: center;
+    text-align: center;
+  }
+  .login_main .bottom_links ul li {
+    margin-bottom: 10px;
   }
 }/*# sourceMappingURL=Login.module.css.map */
